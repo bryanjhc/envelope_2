@@ -66,7 +66,7 @@ body, html {
 }
 
 .option {
-    color: #ff15ad; /* Make sure the text is white */
+    color: #ff15ad; /* Make sure the text is pink */
     font-size: 18px; /* Size of the text for options */
     display: block; /* Ensure the label takes up its own line */
     margin: 5px 0; /* Add some space between options */
