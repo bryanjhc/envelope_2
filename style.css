@@ -1,0 +1,78 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow */
+}
+
+.envelope {
+    width: 600px;
+    height: 300px;
+    background-color: #8B4513; /* SaddleBrown */
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px; /* Rounded corners for the envelope */
+}
+
+.letter {
+    width: 90%;
+    height: 0%;
+    background-color: #FFF; /* White background for the letter */
+    position: absolute;
+    bottom: 50%;
+    transition: all 0.5s ease;
+    border-radius: 5px; /* Rounded corners for the letter */
+    box-sizing: border-box;
+    overflow: hidden; /* Ensuring contents do not overflow */
+    opacity: 0; /* Make the letter invisible initially */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* State when letter is half protruded */
+.envelope:hover .letter {
+    height: 50%;
+    bottom: 25%; /* Adjust position as it grows */
+    opacity: 1; /* Make the letter visible */
+}
+
+/* State when letter is fully out */
+.letter.open {
+    height: 100%;
+    bottom: 0; /* Adjust position to fully display the letter */
+    opacity: 1; /* Make the letter visible */
+}
+
+.message {
+    font-size: 24px; /* Larger text for the message */
+    text-align: center;
+    color: #000; /* Black text color */
+}
+
+.options {
+    /* Existing styles remain unchanged */
+    padding-top: 20px; /* Add space above the options */
+}
+
+.option {
+    color: #ff15ad; /* Make sure the text is white */
+    font-size: 18px; /* Size of the text for options */
+    display: block; /* Ensure the label takes up its own line */
+    margin: 5px 0; /* Add some space between options */
+}
+
+/* Style for checkbox inputs */
+.option input[type="checkbox"] {
+    margin-right: 10px; /* Add space between the checkbox and the label text */
+}
